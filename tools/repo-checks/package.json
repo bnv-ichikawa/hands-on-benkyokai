@@ -1,0 +1,10 @@
+{
+  "name": "repo-checks",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "リポジトリ全体の整合性を検査する。CONSTITUTION の原則6が求める機械的な検査。",
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  }
+}

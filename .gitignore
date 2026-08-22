@@ -1,0 +1,33 @@
+# 個人的な情報の置き場。共有しない（AIは読み書きする）
+.private/
+
+# 入力直後のメモには機密が混ざる可能性があるため、既定では共有しない
+second-brain/inbox/*
+!second-brain/inbox/README.md
+
+# キャラクターの下書きは作業用なので共有しない（配置後は .private/ai-characters/ が正）
+characters-draft/*
+!characters-draft/README.md
+
+# 認証情報・ローカル設定
+# settings.local.json は各自のPCのパスが入るため共有しない
+.claude/settings.local.json
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# 依存パッケージ
+node_modules/
+
+# スライドの中間生成物。PDF や画像は pptx から作り直せる
+# .pptx は成果物そのものなので Git 管理する（PowerPoint で仕上げたものが正本になる）
+outputs/*.pdf
+outputs/*.html
+outputs/*.png

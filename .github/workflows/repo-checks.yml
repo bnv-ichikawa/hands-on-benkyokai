@@ -1,0 +1,27 @@
+name: repo checks
+
+# CONSTITUTION の原則6（1つの決まりの正本は1つ）が求める機械的な検査を回す。
+# 対象はリポジトリ全体なので、paths でファイルを絞らない。
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: tools/repo-checks
+    steps:
+      - uses: actions/checkout@v6
+      # Node の版を固定する。検査は Node 標準の node:test だけを使い、
+      # 依存を持たないため npm install は不要。
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+      - name: Run repository checks
+        run: npm test

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where gemini *)",
+      "Bash(where claude *)",
+      "Bash(where codex *)",
+      "Bash(where node *)",
+      "Bash(npm ls *)"
+    ]
+  }
+}
