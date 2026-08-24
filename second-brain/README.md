@@ -47,10 +47,4 @@
 
 解説資料はリポジトリのルートの [`docs/`](../docs/README.md) にまとめています。
 
-- [Second Brain を始めるときに決めること](../docs/getting-started.md)
-- [docs/README.md](../docs/README.md)
-- [Second Brain とは何か](../docs/second-brain.md)
-- [Second Brain の時系列と進化](../docs/references/second-brain-history.md)
-- [整理パターン: PARA, Zettelkasten, MOC](../docs/references/organization-patterns.md)
-
 Second Brain は記憶を置き換えるものではありません。未来の自分や AI が過去の文脈を理解し、次の行動や成果物につなげるための外部記憶として育てていきます。
