@@ -2,6 +2,8 @@
 
 `bootstrap/windows-first-time-setup/` は、Windows PCで`hands-on-benkyokai`を始めるための初期環境セットアップ方法とSkillを置く場所です。
 
+このSkillは、Git for Windowsの導入とPATHの反映、リポジトリのclone、Git identityの設定までを行います。
+
 ## 🗂️ ディレクトリ構成
 
 ```text
@@ -13,4 +15,4 @@ windows-first-time-setup/
 
 ## 🚀 基本的な使い方
 
-Codexが実行する手順は、[`SKILL.md`](SKILL.md)を参照してください。
+Codexが実行する具体的な手順は、[`SKILL.md`](SKILL.md)を参照してください。
