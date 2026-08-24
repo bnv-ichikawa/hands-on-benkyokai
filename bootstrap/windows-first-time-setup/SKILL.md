@@ -47,6 +47,19 @@ Windows 以外なら停止する。
 
 Python、Node.js、WSL、Chocolatey、Scoop、Visual Studio、GitHub CLI などが入っている前提にしない。
 
+## 管理者権限が必要な場合
+
+管理者権限が必要な操作は、AIだけで完了しようとしない。
+
+1. コマンドを実行する前に、UAC または管理者資格情報の画面が表示される可能性をユーザーへ伝える
+2. UAC が表示されたら処理を停止し、ユーザー本人に画面上で承認してもらう
+3. 標準ユーザーのため管理者資格情報が求められた場合は、端末の管理者に画面上で入力してもらう
+4. ユーザーから承認または入力の完了連絡を受けた後に、コマンドの結果を確認して処理を再開する
+
+管理者パスワード、PIN、その他の認証情報をチャットで質問・受領・保存しない。UAC の回避、権限昇格の迂回、認証情報の推測を行わない。
+
+管理者の承認または資格情報を用意できない場合は、その操作を実行せず、セットアップを停止して必要な権限をユーザーへ伝える。
+
 ## 2. Git を確認する
 
 ```powershell
@@ -90,7 +103,7 @@ if ($winget) {
 
 App Installer の再登録後も WinGet が見つからない場合は、Microsoft 公式の PowerShell モジュールを使って WinGet の安定版を修復インストールする。
 
-この処理では NuGet provider と `Microsoft.WinGet.Client` PowerShell module を導入する。UAC や権限確認が表示された場合は、ユーザーに承認が必要な画面を明確に伝える。
+この処理では NuGet provider と `Microsoft.WinGet.Client` PowerShell module を導入する。`Repair-WinGetPackageManager -AllUsers` などで管理者権限が必要になった場合は、「管理者権限が必要な場合」の手順に従い、ユーザー本人の承認または端末管理者による認証を待つ。
 
 ```powershell
 $progressPreference = 'silentlyContinue'
@@ -141,7 +154,7 @@ Git がない場合は、準備した WinGet で Git for Windows をインスト
 winget install --id Git.Git -e --source winget --accept-source-agreements --accept-package-agreements
 ```
 
-UAC や Windows の確認画面でユーザー操作が必要なら、どの確認が必要かだけを明確に伝える。
+UAC や管理者資格情報の画面が表示された場合は、「管理者権限が必要な場合」の手順に従って停止し、ユーザー本人または端末管理者の操作を待つ。
 
 終了後、`git --version` が成功するまでインストール成功とは扱わない。
 
@@ -379,6 +392,9 @@ git -C "$destination" status --short --branch
 ## やらないこと
 
 - GitHub 認証情報を要求・保存しない
+- 管理者パスワード、PIN、その他の認証情報をチャットで要求・受領・保存しない
+- UAC をユーザーに代わって承認しない
+- 管理者権限を回避・迂回しない
 - 既存フォルダを削除・上書きしない
 - repository 内のコードを実行しない
 - `private/my-profile/me.md` を編集しない
