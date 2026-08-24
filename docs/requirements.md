@@ -6,12 +6,15 @@
 
 | したいこと | 必要なもの | 入れなくてよいもの |
 | --- | --- | --- |
+| PC を初回セットアップする（Git 導入と clone） | Windows、PowerShell、WinGet | Node.js / GitHub CLI |
 | AIと会話して、業務を知識庫に残す | Codex デスクトップアプリ | Git / GitHub CLI / Node.js |
 | スライドを仕上げる、PDF にする | Microsoft PowerPoint | Node.js / PowerShell スクリプト |
 | GitHub に自分のリポジトリを作って push する | Git、GitHub CLI（`gh`） | **Node.js** |
 | リポジトリの整合性検査を回す | Node.js 18 以上 | 依存パッケージ（`npm install` は不要） |
 
-**勉強会の参加者に必要なのは、上の3行までです。** 4行目はこのテンプレートを保守する人の作業です。
+**勉強会の参加者に必要なのは、上の4行までです。** 5行目はこのテンプレートを保守する人の作業です。
+
+初回セットアップの手順は [初回セットアップ](../bootstrap/README.md) にあります。
 
 ## なぜ Node.js が要る場面と要らない場面があるのか
 
