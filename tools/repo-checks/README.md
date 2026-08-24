@@ -4,7 +4,7 @@
 
 **この検査は、リポジトリを保守する人が使います。** 勉強会の参加者が自分の業務を残したり push したりするのに、この検査も Node.js も必要ありません（[docs/github-account-and-push.md](../../docs/github-account-and-push.md)）。
 
-## 実行
+## 🚀 実行
 
 | 項目 | 内容 |
 | --- | --- |
@@ -47,10 +47,13 @@ CIは [.github/workflows/repo-checks.yml](../../.github/workflows/repo-checks.ym
 
 **落ちない文字が見つかった場合は、[lib/markdown-links.mjs](./lib/markdown-links.mjs) の `DROPPED_IN_ANCHOR` に足してください。** 実例は [test/markdown-links.test.mjs](./test/markdown-links.test.mjs) の「見出しからアンカーを作る規則が、このリポジトリの実例と一致する」に追加します。
 
-## 未確認事項
+**見出しの絵文字は `EMOJI_IN_ANCHOR` で別に落としています。** 落とすのが最後の `trim` のあとなのは、絵文字の直後の空白を残してハイフンにするためです。`## 🚀 Foo` のアンカーは `-foo` になります。
+
+## 🚧 未確認事項
 
 - **`headingToAnchor` はGitHubの実装そのものではありません。** 同じ見出しが2つあるときにGitHubが付ける連番（`-1`、`-2`）には対応していません。現在このリポジトリにその形のリンクはありません
 - **`─`（罫線素片）を落とす扱いは、GitHubの実挙動で確認していません。** このリポジトリの見出しに `──` が出てくるため、`—` や `–` と同じ扱いに揃えました。**現在この見出しを指すリンクは無いので、どちらでも結果は変わりません**
+- **絵文字を落として直後の空白をハイフンにする扱いは、GitHubの実挙動で確認していません。** `docs/readme-authoring-rules.md` のテンプレートが絵文字見出しを使うため、その形に合わせています
 - **HTMLの `<a name>` やアンカー拡張は見ていません。** 対象はMarkdownの見出しだけです
 - **角括弧やスペースを含むリンクは収集されません。** `![X](<C:\Users\Some Name\...>)` のような形は検査を通り抜けます
 

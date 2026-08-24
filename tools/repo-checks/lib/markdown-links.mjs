@@ -6,12 +6,20 @@
 const DROPPED_IN_ANCHOR =
   /[`*_~()[\]{}「」『』（）【】、。,.:;：；!?！？"'"'／/\|<>#@$%^&+=→⇔・—–─〜~]/g;
 
+// 見出しの先頭に付ける絵文字。GitHubはアンカーから落とすが、
+// 直後の空白は残るため、アンカーは先頭がハイフンになる。
+// 落とすタイミングが DROPPED_IN_ANCHOR と違うので、別に持つ。
+const EMOJI_IN_ANCHOR = /[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}]/gu;
+
 /**
  * 見出しの文字列から、GitHubが作るアンカーを推定する。
  *
  * 備考: 空白は1つずつハイフンへ変える。まとめて1つにしてはいけない。
  * GitHubは `Cloud Run — 現行` を `cloud-run--現行`（ハイフン2つ）にする。
  * `—` を落としたあと、前後の空白がそれぞれハイフンになるため。
+ *
+ * 備考: 絵文字を落とすのは最後の trim のあとにする。先に落として trim すると、
+ * 絵文字の直後の空白まで消えてしまい、GitHubが付ける先頭のハイフンが再現できない。
  *
  * @param {string} heading `#`を除いた見出し本文
  * @returns {string} アンカー（先頭の`#`は含まない）
@@ -22,6 +30,7 @@ export function headingToAnchor(heading) {
     .toLowerCase()
     .replace(DROPPED_IN_ANCHOR, "")
     .trim()
+    .replace(EMOJI_IN_ANCHOR, "")
     .replace(/\s/g, "-");
 }
 

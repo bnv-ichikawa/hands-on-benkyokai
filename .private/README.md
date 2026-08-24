@@ -2,16 +2,19 @@
 
 **個人的な情報の置き場です。AIは読み書きします。**
 
-用途ごとにフォルダを分けます。
-
-| フォルダ | 置くもの |
-| --- | --- |
-| [`ai-characters/`](ai-characters/README.md) | AIに与える人格（キャラクター）の定義 |
-| [`my-profile/`](my-profile/README.md) | 自分のプロフィールや役割 |
-
 **このファイルは `.private/` の Git での扱いの正本です。** 他のファイルからはここを参照します（[CONSTITUTION.md](../CONSTITUTION.md) の「1. 正本と案内を分ける」）。
 
-## Git での扱い
+## 🗂️ ディレクトリ構成
+
+```text
+.private/
+├── ai-characters/    AIに与える人格（キャラクター）の定義
+└── my-profile/       自分のプロフィールや役割
+```
+
+使い方はそれぞれの README にあります。[`ai-characters/`](ai-characters/README.md) / [`my-profile/`](my-profile/README.md)
+
+## 📏 Git での扱い
 
 **このテンプレートでは、`.private/` の中身を Git 管理しています。** キャラクター定義とプロフィールの雛形を、リポジトリを配ったときに一緒に渡すためです。
 
@@ -24,7 +27,7 @@
 
 `.gitignore` の効き方は [CONSTITUTION.md](../CONSTITUTION.md) の「4. 認証情報と個人情報をリポジトリに入れない」にあります。
 
-## 自分の情報を書く前にやること
+## 🚀 自分の情報を書く前にやること
 
 `my-profile/me.md` のように**最初から入っているファイル**へ自分の情報を書くときは、どちらかを選びます。
 
@@ -56,9 +59,8 @@ git update-index --no-skip-worktree .private/my-profile/me.md
 
 [docs/github-account-and-push.md](../docs/github-account-and-push.md) の手順では `.private` を `git add` しません。この場合 `.private/` は最初から未追跡なので、`.gitignore` がそのまま効き、追加の操作は不要です。
 
-## 書かないこと
+## 📏 書かないこと
 
-- パスワード、APIキー、アクセストークン
-- 顧客や同僚の個人情報
+置いてはいけないものは [CONSTITUTION.md](../CONSTITUTION.md) の「4. 認証情報と個人情報をリポジトリに入れない」にあります。
 
-**AIには渡ります。** 手元から漏れて困るものは書かないでください。
+`.private/` 固有の注意として、**ここに書いたものは AI に渡ります。** 手元から漏れて困るものは書かないでください。

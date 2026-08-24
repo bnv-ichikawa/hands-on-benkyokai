@@ -2,10 +2,11 @@
 
 現在の標準は、公式スライドマスタから作った PowerPoint テンプレートを使う方式です。
 
+## 🗂️ ディレクトリ構成
+
 ```text
 templates/
-└── bnv-master/
-    └── template.pptx
+└── bnv-master/    公式スライドマスタから作った PowerPoint テンプレート
 ```
 
 `template.pptx` には、公式デッキのスライドマスタとレイアウトだけが残っています。背景写真、ロゴ、配色、ページ番号、`CONFIDENTIAL` 表示はマスタ側に含まれます。
