@@ -76,12 +76,12 @@ gh auth status
 
 push する前に、`.gitignore` を確認します。
 
-この研修では、個人的な情報を入れる `.private/` を**自分のリポジトリには載せません。** 下の手順8で、`.private` を `git add` の対象に入れないためです。
+この研修では、個人的な情報を入れる `private/` を**自分のリポジトリには載せません。** 下の手順8で、`private` を `git add` の対象に入れないためです。
 
-**ただしテンプレート側では、`.private/` の雛形を Git 管理しています。** このテンプレートを clone して使っている場合は扱いが変わります。**Git での扱いの正本は [`.private/README.md`](../.private/README.md) です。**
+**ただしテンプレート側では、`private/` の雛形を Git 管理しています。** このテンプレートを clone して使っている場合は扱いが変わります。**Git での扱いの正本は [`private/README.md`](../private/README.md) です。**
 
 ```gitignore
-.private/
+private/
 ```
 
 API キー、パスワード、アクセストークン、個人情報が入ったファイルも載せません。
@@ -107,7 +107,7 @@ git branch -M main
 git status --short --ignored
 ```
 
-`.private/` が `!! .private/` のように ignored として表示されていれば、GitHub には載りません。**このテンプレートを clone して `.git` ごと引き継いだ場合は `!!` になりません。**その場合は [`.private/README.md`](../.private/README.md) の手順に従ってください。
+`private/` が `!! private/` のように ignored として表示されていれば、GitHub には載りません。**このテンプレートを clone して `.git` ごと引き継いだ場合は `!!` になりません。**その場合は [`private/README.md`](../private/README.md) の手順に従ってください。
 
 ## 8. 初回コミットを作る
 
@@ -198,7 +198,7 @@ git --version
 gh auth login -h github.com -w
 ```
 
-### `.private/` が push されそうで不安
+### `private/` が push されそうで不安
 
 次を確認します。
 
@@ -206,7 +206,7 @@ gh auth login -h github.com -w
 git status --short --ignored
 ```
 
-`.private/` が `!! .private/` と表示されていれば ignored です。`A .private/...` のように表示された場合は、コミットする前に止めて確認します。**このテンプレートを clone して `.git` ごと引き継いだ場合は `!!` になりません。**扱いは [`.private/README.md`](../.private/README.md) にあります。
+`private/` が `!! private/` と表示されていれば ignored です。`A private/...` のように表示された場合は、コミットする前に止めて確認します。**このテンプレートを clone して `.git` ごと引き継いだ場合は `!!` になりません。**扱いは [`private/README.md`](../private/README.md) にあります。
 
 ## 参考
 

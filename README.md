@@ -12,7 +12,7 @@
 ├── CONSTITUTION.md              リポジトリ全体にかかる決まりの正本
 ├── AGENTS.md                    使用中のキャラクター定義。AIが読む人格はここだけ
 ├── .gitignore
-├── .private/                    個人的な情報の置き場。AIは読み書きする
+├── private/                     個人的な情報の置き場。AIは読み書きする
 │   ├── ai-characters/           各自で作るキャラクター定義の保管場所
 │   └── my-profile/              自分のプロフィールや役割
 ├── .agents/
@@ -41,7 +41,7 @@
 - [`bootstrap/README.md`](bootstrap/README.md)
 - [`docs/README.md`](docs/README.md)
 - [`second-brain/README.md`](second-brain/README.md)
-- [`.private/README.md`](.private/README.md)
+- [`private/README.md`](private/README.md)
 - [`tools/README.md`](tools/README.md)
 
 `.agents/skills/` は README を持ちません。進め方、聞かれること、完了の基準は各 `SKILL.md` にあります。

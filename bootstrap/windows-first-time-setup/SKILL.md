@@ -1,6 +1,6 @@
 ---
 name: windows-first-time-setup
-description: Git がまだ入っていない可能性がある Windows PC を、hands-on-benkyokai を始められる状態にする初回限定のセットアップ手順。Windows版 ChatGPT Desktop / Codex で、Git for Windows の確認・インストール、PATH の反映、固定 public repository bnv-ichikawa/hands-on-benkyokai の Desktop への clone、clone 後の .private/my-profile/me.md を使った Git user.name / user.email の初期設定まで行う。通常の Git 操作には使わない。
+description: Git がまだ入っていない可能性がある Windows PC を、hands-on-benkyokai を始められる状態にする初回限定のセットアップ手順。Windows版 ChatGPT Desktop / Codex で、Git for Windows の確認・インストール、PATH の反映、固定 public repository bnv-ichikawa/hands-on-benkyokai の Desktop への clone、clone 後の private/my-profile/me.md を使った Git user.name / user.email の初期設定まで行う。通常の Git 操作には使わない。
 ---
 
 # Windows 初回セットアップ
@@ -25,11 +25,11 @@ clone 後の branch、commit、push、PR など通常の Git 操作は Codex の
 4. PATH を反映し `git --version` を確認する
 5. Desktop の実パスを取得する
 6. `hands-on-benkyokai` を clone する
-7. clone 後に `.private/my-profile/me.md` を読む
+7. clone 後に `private/my-profile/me.md` を読む
 8. Git の `user.name` / `user.email` の未設定項目を設定する
 9. clone と Git 設定を検証する
 
-Git の identity 設定より **clone を先に行う**こと。`.private/my-profile/me.md` は clone 後でなければ読めないためである。
+Git の identity 設定より **clone を先に行う**こと。`private/my-profile/me.md` は clone 後でなければ読めないためである。
 
 ## 1. Windows を確認する
 
@@ -205,12 +205,12 @@ https://github.com/bnv-ichikawa/hands-on-benkyokai.git
 
 別のフォルダまたは別 repository なら停止し、ユーザーに状況を伝える。
 
-## 6. `.private/my-profile/me.md` から Git identity 候補を読む
+## 6. `private/my-profile/me.md` から Git identity 候補を読む
 
 clone 後、以下を読む。
 
 ```powershell
-$profilePath = Join-Path $destination '.private\my-profile\me.md'
+$profilePath = Join-Path $destination 'private\my-profile\me.md'
 ```
 
 対象項目は次の2つだけ。
@@ -253,7 +253,7 @@ $currentEmail = git config --global --get user.email
 
 未設定項目について、次の優先順位で値を決める。
 
-1. `.private/my-profile/me.md` の対応項目
+1. `private/my-profile/me.md` の対応項目
 2. 対応項目が未記入ならユーザーへ質問
 
 つまり、`user.name` が未設定でプロフィールの「名前 / 呼ばれ方」が埋まっていれば、その値を使う。プロフィールも空なら `user.name` に使う名前をユーザーに聞く。
@@ -319,6 +319,6 @@ git -C "$destination" status --short --branch
 - GitHub 認証情報を要求・保存しない
 - 既存フォルダを削除・上書きしない
 - repository 内のコードを実行しない
-- `.private/my-profile/me.md` を編集しない
+- `private/my-profile/me.md` を編集しない
 - branch / commit / push / PR など通常運用の Git 操作をこの手順に含めない
 - 初回セットアップ後の通常作業でこの手順を自動利用しない
