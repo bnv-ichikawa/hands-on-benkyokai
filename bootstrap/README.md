@@ -13,6 +13,6 @@ bootstrap/
 
 ## 🚀 Windows PC の初期セットアップ
 
-[`windows-first-time-setup/`](windows-first-time-setup/SKILL.md) は、Git が入っていない Windows PC でこのリポジトリを使い始めるための Skill です。
+[`windows-first-time-setup/`](windows-first-time-setup/README.md) は、Git が入っていない Windows PC でこのリポジトリを使い始めるためのセットアップです。
 
 Git for Windows の導入、リポジトリの clone、Git identity の設定までを行います。
