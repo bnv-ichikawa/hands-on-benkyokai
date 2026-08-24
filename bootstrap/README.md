@@ -4,7 +4,14 @@
 
 通常の作業で使う `.agents/skills/` とは分けています。リポジトリを clone した後の Git 操作は、Codex の標準機能を使います。
 
-## Windows の初回セットアップ
+## 🗂️ ディレクトリ構成
+
+```text
+bootstrap/
+└── windows-first-time-setup/    Windows で Git 導入から初回 clone までを行う
+```
+
+## 🚀 Windows の初回セットアップ
 
 [`windows-first-time-setup/`](windows-first-time-setup/SKILL.md) を使います。**Git の導入から初回 clone、Git identity の設定までを担当します。**
 
