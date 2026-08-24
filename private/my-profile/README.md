@@ -2,14 +2,14 @@
 
 このフォルダには、**自分が何者で、どんな仕事をしているか**を書いたファイルを置きます。AIに毎回同じ前提を説明しなくて済むようにするためのものです。
 
-親フォルダの [`.private/`](../README.md) は、個人的な情報の置き場です。AIに与える人格の定義は [`../ai-characters/`](../ai-characters/README.md) にあります。**Git での扱いは [`../README.md`](../README.md) が正本です。**
+親フォルダの [`private/`](../README.md) は、個人的な情報の置き場です。AIに与える人格の定義は [`../ai-characters/`](../ai-characters/README.md) にあります。**Git での扱いは [`../README.md`](../README.md) が正本です。**
 
 ## 🚀 使い方
 
 **先に [`../README.md` の「自分の情報を書く前にやること」](../README.md#-自分の情報を書く前にやること) を読んでください。**
 
 1. [`me.md`](me.md) を開いて、埋められるところだけ書く（全部埋めなくてよい）
-2. AIとの会話のはじめに「`.private/my-profile/me.md` を読んで」と伝える
+2. AIとの会話のはじめに「`private/my-profile/me.md` を読んで」と伝える
 
 `AGENTS.md` と違って、ここは自動では読み込まれません。読んでほしいときは、そのつど伝えてください。
 
