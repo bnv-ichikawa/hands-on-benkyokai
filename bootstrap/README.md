@@ -1,18 +1,18 @@
-# 初回セットアップ
+# bootstrap
 
-このディレクトリは、**まだ Git もリポジトリも用意されていない Windows PC を最初の1回だけ準備するための手順**を置く場所です。
+`bootstrap/` は、**何かを始めるときに必要な初期環境のセットアップ方法や、セットアップを実行する Skill を置く場所**です。
 
-通常の作業で使う `.agents/skills/` とは分けています。リポジトリを clone した後の Git 操作は、Codex の標準機能を使います。
+ソフトウェアの導入、初期設定、必要なデータの取得など、作業を始める前に必要な準備を対象とします。
 
 ## 🗂️ ディレクトリ構成
 
 ```text
 bootstrap/
-└── windows-first-time-setup/    Windows で Git 導入から初回 clone までを行う
+└── windows-first-time-setup/    Windows PC の初期環境をセットアップする
 ```
 
-## 🚀 Windows の初回セットアップ
+## 🚀 Windows PC の初期セットアップ
 
-[`windows-first-time-setup/`](windows-first-time-setup/SKILL.md) を使います。**Git の導入から初回 clone、Git identity の設定までを担当します。**
+[`windows-first-time-setup/`](windows-first-time-setup/SKILL.md) は、Git が入っていない Windows PC でこのリポジトリを使い始めるための Skill です。
 
-初回セットアップが終わったら、この手順は原則として再利用しません。
+Git for Windows の導入、リポジトリの clone、Git identity の設定までを行います。
