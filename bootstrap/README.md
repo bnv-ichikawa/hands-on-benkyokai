@@ -11,8 +11,8 @@ bootstrap/
 └── windows-first-time-setup/    Windows PC の初期環境をセットアップする
 ```
 
-## 🚀 Windows PC の初期セットアップ
+### `windows-first-time-setup/`
 
-[`windows-first-time-setup/`](windows-first-time-setup/README.md) は、Git が入っていない Windows PC でこのリポジトリを使い始めるためのセットアップです。
+Windows PCで`hands-on-benkyokai`を始めるための初期環境セットアップを担当します。
 
-Git for Windows の導入、リポジトリの clone、Git identity の設定までを行います。
+詳細な使い方は[`README.md`](windows-first-time-setup/README.md)を参照してください。
