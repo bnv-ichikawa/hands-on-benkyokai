@@ -10,7 +10,6 @@
 docs/
 ├── requirements.md              何をするのに何が必要か
 ├── readme-authoring-rules.md    README の記述ルール
-├── setup-windows.md             Windows PC の準備
 ├── github-account-and-push.md   GitHub アカウント作成と push
 ├── getting-started.md           始めるときに決めること
 ├── second-brain.md              Second Brain とは何か
@@ -28,7 +27,6 @@ docs/
 ## 🚀 まず読む
 
 - [何をするのに何が必要か](requirements.md)
-- [Windows PC の準備](setup-windows.md)
 - [GitHub アカウントを作成して自分のリポジトリに push する](github-account-and-push.md)
 - [Second Brain を始めるときに決めること](getting-started.md)
 - [Second Brain とは何か](second-brain.md)

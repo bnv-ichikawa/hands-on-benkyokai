@@ -31,6 +31,5 @@
 
 | 手順 | 内容 |
 | --- | --- |
-| [setup-windows.md](setup-windows.md) | Windows PC の準備（PowerPoint の確認） |
 | [github-account-and-push.md](github-account-and-push.md) | GitHub アカウント作成と push |
 | [../tools/repo-checks/README.md](../tools/repo-checks/README.md) | 整合性検査の実行方法 |
