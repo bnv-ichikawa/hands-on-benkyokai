@@ -15,10 +15,10 @@
 │   └── my-profile/              自分のプロフィールや役割
 │       └── me.md                プロフィール本体（各自で作る）
 ├── .agents/
-│   └── skills/                  AIの対話フロー定義
-│       ├── teach-my-work/       業務を教わり、知識庫へ整理する
-│       ├── create-character/    質問しながらキャラクターを作る
-│       └── make-my-slides/      メモや会話から PowerPoint スライドを作る
+│   └── skills/                  AIに頼める作業と、その進め方
+│       ├── teach-my-work/       自分の仕事を聞き取ってもらい、手順書として残す
+│       ├── create-character/    AIの性格と話し方を自分で決める
+│       └── make-my-slides/      公式マスタに載せるスライドの中身を作る
 ├── assets/                      画像などの素材
 │   └── characters/              キャラクターのアイコン画像
 ├── docs/                        Second Brain の考え方と設計方針（下の表を参照）
