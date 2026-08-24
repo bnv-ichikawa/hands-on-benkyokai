@@ -4,7 +4,7 @@
 
 ## 必要なもの
 
-**必要なソフトウェアは [何をするのに何が必要か](requirements.md) が正本です。** このページで確認するのは **Microsoft PowerPoint** です。
+必要なソフトウェアは [何をするのに何が必要か](requirements.md) にあります。
 
 PowerPoint が入っていない PC では、`.pptx` の仕上げや確認は別の環境で行います。
 

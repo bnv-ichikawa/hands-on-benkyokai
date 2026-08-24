@@ -43,6 +43,7 @@
 | --- | --- |
 | [`README.md`](docs/README.md) | 解説資料の入口（MOC） |
 | [`requirements.md`](docs/requirements.md) | 何をするのに何が必要か（必要なソフトウェアの正本） |
+| [`readme-authoring-rules.md`](docs/readme-authoring-rules.md) | `README.md` の記述ルール |
 | [`setup-windows.md`](docs/setup-windows.md) | Windows PC の準備（PowerPoint 方式の確認） |
 | [`github-account-and-push.md`](docs/github-account-and-push.md) | GitHub アカウント作成と自分のリポジトリへの push |
 | [`getting-started.md`](docs/getting-started.md) | 始めるときに決めること |
@@ -106,6 +107,6 @@
 - [`CONSTITUTION.md`](CONSTITUTION.md) はリポジトリ全体にかかる決まりの正本。個別の決まりはそこから辿る
 - `README.md` は人間向けの案内、`AGENTS.md` はAIが読むキャラクター定義。AIへの作業指示は `.agents/skills/` が持つ
 - `docs/` は Second Brain の考え方の説明、`second-brain/` は業務知識そのもの
-- `tools/` は各自のPCで実行するプログラムを置く場所。いまは [`tools/repo-checks`](tools/repo-checks/README.md)（リポジトリの整合性検査）だけが入っている
+- `.private/` は個人的な情報の置き場。**扱いは [`.private/README.md`](.private/README.md) が正本**
 - `.private/` は個人的な情報の置き場。用途ごとにフォルダを分ける（`ai-characters/` と `my-profile/`）。**Git での扱いと、自分の情報を書く前にやることは [`.private/README.md`](.private/README.md) が正本**
 - ただし、いま人格として効いているのは `AGENTS.md` の内容だけ。`ai-characters/` に置いただけでは反映されない

@@ -36,3 +36,11 @@
 参考にした動画では、AI Second Brain で重要なのは「AI がどこを見ればよいか分かること」だと説明されています。
 
 そのため、人間向けの入口は `README.md`、AI エージェント向けのルーティングは将来的に `AGENTS.md` に分けると扱いやすくなります。
+
+## 常に従う固定ルール
+
+次の文書は、必要に応じて選ぶ資料ではなく、このリポジトリでの作業に常に適用する固定ルールです。
+
+- [readme-authoring-rules.md](readme-authoring-rules.md) — `README.md` の記述ルール
+- [requirements.md](requirements.md) — 必要なソフトウェア
+- [../CONSTITUTION.md](../CONSTITUTION.md) — リポジトリ全体にかかる決まり

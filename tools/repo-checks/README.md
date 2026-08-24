@@ -29,7 +29,7 @@ CIは [.github/workflows/repo-checks.yml](../../.github/workflows/repo-checks.ym
 | **参照の解決**（[test/markdown-links.test.mjs](./test/markdown-links.test.mjs)） | Markdownの相対リンクが、存在しないパスや存在しない見出しを指している |
 | **複製の一致**（[test/mirrors.test.mjs](./test/mirrors.test.mjs)） | [lib/duplicates.mjs](./lib/duplicates.mjs) に登録した複製が、実際には一致していない |
 
-**`{...}` を含むリンクは検査しません。** キャラクター画像の参照は絶対パスでなければ表示されず、絶対パスはPCごとに違うためコミットできません。そのため正本にはプレースホルダーだけを置き、置き換えは各自の手元で行います（[CONSTITUTION.md](../../CONSTITUTION.md) の「5. 特定のPCでしか動かない状態を作らない」）。
+**`{...}` を含むリンクは検査しません。** プレースホルダーの扱いは [CONSTITUTION.md](../../CONSTITUTION.md) の「5. 特定のPCでしか動かない状態を作らない」にあります。
 
 ## 複製してよい対象は [lib/duplicates.mjs](./lib/duplicates.mjs) にある
 
@@ -53,3 +53,15 @@ CIは [.github/workflows/repo-checks.yml](../../.github/workflows/repo-checks.ym
 - **`─`（罫線素片）を落とす扱いは、GitHubの実挙動で確認していません。** このリポジトリの見出しに `──` が出てくるため、`—` や `–` と同じ扱いに揃えました。**現在この見出しを指すリンクは無いので、どちらでも結果は変わりません**
 - **HTMLの `<a name>` やアンカー拡張は見ていません。** 対象はMarkdownの見出しだけです
 - **角括弧やスペースを含むリンクは収集されません。** `![X](<C:\Users\Some Name\...>)` のような形は検査を通り抜けます
+
+## 既知の未登録の重複
+
+次の重複が残っています。**登録済みではありません。** 正本を決めて参照へ置き換える対象です。箇所数は実測値です。
+
+| 重複している決まり | 箇所 | 正本の候補 |
+| --- | --- | --- |
+| ローカル実行用スクリプトを同梱しない | 5ファイル6箇所 | [docs/requirements.md](../../docs/requirements.md) |
+| `AGENTS.md` が人格の正本である | 3ファイル5箇所 | [CONSTITUTION.md](../../CONSTITUTION.md) |
+| PowerPoint で仕上げたあとは pptx が正本 | 4ファイル4箇所 | [make-my-slides/SKILL.md](../../.agents/skills/make-my-slides/SKILL.md) |
+| `tools/` の役割 | 3ファイル3箇所 | [tools/README.md](../README.md) |
+| PARA の役割の1行説明 | 2ファイル（逐語一致） | [organization-patterns.md](../../docs/references/organization-patterns.md) |
