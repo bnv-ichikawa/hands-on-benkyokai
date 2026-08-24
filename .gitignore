@@ -26,8 +26,9 @@ Thumbs.db
 # 依存パッケージ
 node_modules/
 
-# スライドの中間生成物。PDF や画像は pptx から作り直せる
-# .pptx は成果物そのものなので Git 管理する（PowerPoint で仕上げたものが正本になる）
-outputs/*.pdf
-outputs/*.html
-outputs/*.png
+# 生成物置き場。個人のローカル成果物のため共有しない
+outputs/
+
+# 各自のローカルで内容が変わるキャラクター設定。リモートの内容は変更せず、
+# ローカルの変更だけをgitの追跡対象から外す（git update-index --skip-worktree）
+AGENTS.md

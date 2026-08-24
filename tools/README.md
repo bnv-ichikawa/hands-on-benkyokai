@@ -19,6 +19,7 @@
 ```text
 tools/
 ├── make-pptx/      スライド内容（deck.json）の形式定義
+├── marp/           Marp Markdown を PDF / PPTX に変換する
 └── repo-checks/    リポジトリの整合性を機械的に検査する
 ```
 
