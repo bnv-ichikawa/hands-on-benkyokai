@@ -17,13 +17,8 @@
 ├── .agents/
 │   └── skills/                  AIの対話フロー定義
 │       ├── teach-my-work/       業務を教わり、知識庫へ整理する
-│       │   └── flows/           進め方ごとの手順書。選ばれた1つだけを読む
 │       ├── create-character/    質問しながらキャラクターを作る
 │       └── make-my-slides/      メモや会話から PowerPoint スライドを作る
-│           ├── flows/           進め方ごとの手順書。選ばれた1つだけを読む
-│           ├── templates/
-│           │   └── bnv-master/  公式スライドマスタから作ったテンプレート
-│           └── references/      書き方の基準
 ├── assets/                      画像などの素材
 │   └── characters/              キャラクターのアイコン画像
 ├── docs/                        Second Brain の考え方と設計方針（下の表を参照）
