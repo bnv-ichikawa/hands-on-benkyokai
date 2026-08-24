@@ -1,6 +1,6 @@
 ---
 name: windows-first-time-setup
-description: Git がまだ入っていない可能性がある Windows PC を、hands-on-benkyokai を始められる状態にする初回限定のセットアップ手順。Windows版 ChatGPT Desktop / Codex で、Git for Windows の確認・インストール、PATH の反映、固定 public repository bnv-ichikawa/hands-on-benkyokai の Desktop への clone、clone 後の private/my-profile/me.md を使った Git user.name / user.email の初期設定まで行う。通常の Git 操作には使わない。
+description: Git がまだ入っていない可能性がある Windows PC を、hands-on-benkyokai を始められる状態にする初回限定のセットアップ手順。Windows版 ChatGPT Desktop / Codex で、WinGet の確認・再登録・修復インストール、Git for Windows の確認・インストール、PATH の反映、固定 public repository bnv-ichikawa/hands-on-benkyokai の Desktop への clone、clone 後の private/my-profile/me.md を使った Git user.name / user.email の初期設定まで行う。通常の Git 操作には使わない。
 ---
 
 # Windows 初回セットアップ
@@ -21,13 +21,16 @@ clone 後の branch、commit、push、PR など通常の Git 操作は Codex の
 
 1. Windows / PowerShell を確認する
 2. Git の有無を確認する
-3. Git がなければ Git for Windows をインストールする
-4. PATH を反映し `git --version` を確認する
-5. Desktop の実パスを取得する
-6. `hands-on-benkyokai` を clone する
-7. clone 後に `private/my-profile/me.md` を読む
-8. Git の `user.name` / `user.email` の未設定項目を設定する
-9. clone と Git 設定を検証する
+3. Git がなければ WinGet の有無を確認する
+4. WinGet がなければ、App Installer の再登録と WinGet の修復インストールを試す
+5. WinGet でも復旧できない場合だけ、ユーザーへ Microsoft Store での操作を依頼する
+6. Git for Windows をインストールする
+7. PATH を反映し `git --version` を確認する
+8. Desktop の実パスを取得する
+9. `hands-on-benkyokai` を clone する
+10. clone 後に `private/my-profile/me.md` を読む
+11. Git の `user.name` / `user.email` の未設定項目を設定する
+12. clone と Git 設定を検証する
 
 Git の identity 設定より **clone を先に行う**こと。`private/my-profile/me.md` は clone 後でなければ読めないためである。
 
@@ -44,6 +47,19 @@ Windows 以外なら停止する。
 
 Python、Node.js、WSL、Chocolatey、Scoop、Visual Studio、GitHub CLI などが入っている前提にしない。
 
+## 管理者権限が必要な場合
+
+管理者権限が必要な操作は、AIだけで完了しようとしない。
+
+1. コマンドを実行する前に、UAC または管理者資格情報の画面が表示される可能性をユーザーへ伝える
+2. UAC が表示されたら処理を停止し、ユーザー本人に画面上で承認してもらう
+3. 標準ユーザーのため管理者資格情報が求められた場合は、端末の管理者に画面上で入力してもらう
+4. ユーザーから承認または入力の完了連絡を受けた後に、コマンドの結果を確認して処理を再開する
+
+管理者パスワード、PIN、その他の認証情報をチャットで質問・受領・保存しない。UAC の回避、権限昇格の迂回、認証情報の推測を行わない。
+
+管理者の承認または資格情報を用意できない場合は、その操作を実行せず、セットアップを停止して必要な権限をユーザーへ伝える。
+
 ## 2. Git を確認する
 
 ```powershell
@@ -53,21 +69,92 @@ if ($git) { git --version }
 
 `git --version` が成功するなら再インストールしない。
 
-## 3. Git for Windows をインストールする
+## 3. WinGet を確認・準備する
 
-Git がなければ WinGet を確認する。
+このセクションは、Git が入っていない場合だけ実行する。
+
+まず WinGet の有無と動作を確認する。
 
 ```powershell
 $winget = Get-Command winget -ErrorAction SilentlyContinue
+if ($winget) {
+    winget --version
+}
 ```
 
-WinGet が使える場合は実行する。
+`winget --version` が成功する場合は、WinGet の再インストールや修復を行わず「4. Git for Windows をインストールする」へ進む。
+
+### App Installer を再登録する
+
+WinGet が見つからない場合、初回ログイン後の非同期登録が完了していない可能性がある。まず Microsoft 公式の方法で App Installer の登録を要求する。
+
+```powershell
+Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe -ErrorAction Stop
+
+$winget = Get-Command winget -ErrorAction SilentlyContinue
+if ($winget) {
+    winget --version
+}
+```
+
+`winget --version` が成功したら、次の修復インストールは行わない。
+
+### WinGet を修復インストールする
+
+App Installer の再登録後も WinGet が見つからない場合は、Microsoft 公式の PowerShell モジュールを使って WinGet の安定版を修復インストールする。
+
+この処理では NuGet provider と `Microsoft.WinGet.Client` PowerShell module を導入する。`Repair-WinGetPackageManager -AllUsers` などで管理者権限が必要になった場合は、「管理者権限が必要な場合」の手順に従い、ユーザー本人の承認または端末管理者による認証を待つ。
+
+```powershell
+$progressPreference = 'silentlyContinue'
+Install-PackageProvider -Name NuGet -Force | Out-Null
+Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery | Out-Null
+Repair-WinGetPackageManager -AllUsers
+
+$winget = Get-Command winget -ErrorAction SilentlyContinue
+if ($winget) {
+    winget --version
+}
+```
+
+`winget --version` が成功するまで、WinGet の準備が完了したと扱わない。
+
+Microsoft 公式手順:
+
+```text
+https://learn.microsoft.com/windows/package-manager/winget/
+```
+
+### 自動復旧できない場合
+
+再登録と修復インストールの両方に失敗した場合だけ、Microsoft Store の App Installer をユーザーに手動でインストールしてもらう。
+
+```text
+https://apps.microsoft.com/detail/9NBLGGH4NNS1
+```
+
+AI はページを開ける場合は開き、ユーザーには「入手」または「インストール」の操作だけを依頼する。別のパッケージマネージャーを導入しない。
+
+ユーザーがインストールを完了した後、必ず次を再確認する。
+
+```powershell
+$winget = Get-Command winget -ErrorAction SilentlyContinue
+if (-not $winget) {
+    throw 'App Installer の導入後も WinGet を確認できませんでした。'
+}
+
+winget --version
+```
+
+## 4. Git for Windows をインストールする
+
+Git がない場合は、準備した WinGet で Git for Windows をインストールする。
 
 ```powershell
 winget install --id Git.Git -e --source winget --accept-source-agreements --accept-package-agreements
 ```
 
-UAC や Windows の確認画面でユーザー操作が必要なら、どの確認が必要かだけを明確に伝える。
+UAC や管理者資格情報の画面が表示された場合は、「管理者権限が必要な場合」の手順に従って停止し、ユーザー本人または端末管理者の操作を待つ。
 
 終了後、`git --version` が成功するまでインストール成功とは扱わない。
 
@@ -152,19 +239,7 @@ git --version
 
 既存 PATH の削除、並べ替え、その他の環境変数変更はしない。
 
-### WinGet がない場合
-
-別のパッケージマネージャーを勝手に導入しない。
-
-公式 Git for Windows のインストールが必要だと伝え、次を案内する。
-
-```text
-https://git-scm.com/install/windows
-```
-
-インストール後に `git --version` を確認してから続行する。
-
-## 4. Desktop を取得する
+## 5. Desktop を取得する
 
 Desktop の場所を固定値で推測しない。OneDrive 等のリダイレクトも考慮して Windows API から取得する。
 
@@ -178,7 +253,7 @@ $repoUrl = 'https://github.com/bnv-ichikawa/hands-on-benkyokai.git'
 $destination = Join-Path $desktop 'hands-on-benkyokai'
 ```
 
-## 5. Repository を clone する
+## 6. Repository を clone する
 
 `$destination` が存在しない場合は clone する。
 
@@ -205,7 +280,7 @@ https://github.com/bnv-ichikawa/hands-on-benkyokai.git
 
 別のフォルダまたは別 repository なら停止し、ユーザーに状況を伝える。
 
-## 6. `private/my-profile/me.md` から Git identity 候補を読む
+## 7. `private/my-profile/me.md` から Git identity 候補を読む
 
 clone 後、以下を読む。
 
@@ -240,7 +315,7 @@ user.email = taro@example.com
 
 プロフィールファイル自体には書き込まない。
 
-## 7. Git identity を設定する
+## 8. Git identity を設定する
 
 まず既存の global 設定を確認する。
 
@@ -284,7 +359,7 @@ git config --global user.email "<決定したメールアドレス>"
 - `core.editor`
 - alias
 
-## 8. 最終確認
+## 9. 最終確認
 
 ```powershell
 git --version
@@ -317,6 +392,9 @@ git -C "$destination" status --short --branch
 ## やらないこと
 
 - GitHub 認証情報を要求・保存しない
+- 管理者パスワード、PIN、その他の認証情報をチャットで要求・受領・保存しない
+- UAC をユーザーに代わって承認しない
+- 管理者権限を回避・迂回しない
 - 既存フォルダを削除・上書きしない
 - repository 内のコードを実行しない
 - `private/my-profile/me.md` を編集しない
