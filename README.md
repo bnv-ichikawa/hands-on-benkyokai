@@ -27,6 +27,8 @@
 │   └── references/              背景知識・参考文献
 ├── outputs/                     作った成果物（スライドなど）
 ├── tools/                       各自のPCで実行するプログラムを置く場所
+│   ├── make-pptx/               スライド内容（deck.json）の形式定義
+│   ├── marp/                    Marp Markdown を PDF / PPTX に変換する
 │   └── repo-checks/             リポジトリの整合性を機械的に検査する
 └── second-brain/                知識庫の本体（データ側）
     ├── inbox/                   未整理のメモ
