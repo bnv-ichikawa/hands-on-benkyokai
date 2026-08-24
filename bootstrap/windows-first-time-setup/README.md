@@ -1,23 +1,16 @@
-# Windows PC の初期セットアップ
+# windows-first-time-setup
 
-Git が入っていない可能性がある Windows PC を、`hands-on-benkyokai`を始められる状態にするためのセットアップです。
+`bootstrap/windows-first-time-setup/` は、Windows PCで`hands-on-benkyokai`を始めるための初期環境セットアップ方法とSkillを置く場所です。
 
-## このセットアップで行うこと
+## 🗂️ ディレクトリ構成
 
-- Git for Windows の確認とインストール
-- PowerShell で Git を使うための PATH の確認
-- `bnv-ichikawa/hands-on-benkyokai`の Desktop への clone
-- Git の`user.name`と`user.email`の初期設定
-- Git、clone先、Git設定の最終確認
+```text
+windows-first-time-setup/
+├── README.md    このディレクトリの案内
+├── SKILL.md     Codexが実行するセットアップ手順
+└── agents/      Skillの表示設定
+```
 
-## 対象環境
+## 🚀 基本的な使い方
 
-- Windows
-- PowerShell
-- Windows版 ChatGPT Desktop / Codex
-
-GitHub CLI、Node.js、Python、WSLは、このセットアップには必要ありません。
-
-## 実行手順
-
-Codexが実行する具体的な手順と安全上の制約は、[`SKILL.md`](SKILL.md)にあります。
+Codexが実行する手順は、[`SKILL.md`](SKILL.md)を参照してください。
