@@ -21,23 +21,7 @@ https://github.com/<自分のユーザー名>/<リポジトリ名>
 
 ## 2. Git をインストールする
 
-Windows では、まず WinGet で入れる方法を試します。
-
-```powershell
-winget install --id Git.Git -e --source winget
-```
-
-インストール後、PowerShell またはターミナルを開き直して確認します。
-
-```powershell
-git --version
-```
-
-バージョンが表示されれば OK です。
-
-WinGet が使えない場合は、公式サイトから Git for Windows をインストールします。
-
-https://git-scm.com/install/windows
+[初回セットアップ](../bootstrap/README.md) の手順で行います。
 
 ## 3. GitHub CLI をインストールする
 
@@ -84,21 +68,9 @@ gh auth status
 
 ## 5. Git の名前とメールアドレスを設定する
 
-まだ設定していない場合は、Git のコミットに使う名前とメールアドレスを設定します。
+[初回セットアップ](../bootstrap/README.md) の手順で行います。
 
-```powershell
-git config --global user.name "自分の名前"
-git config --global user.email "自分のメールアドレス"
-```
-
-確認します。
-
-```powershell
-git config --global user.name
-git config --global user.email
-```
-
-GitHub に登録したメールアドレスを使うと分かりやすいです。メールアドレスを公開したくない場合は、GitHub の no-reply メールアドレスを使います。
+**コミットに使うメールアドレスは、公開リポジトリでは誰でも見られます。** 公開したくない場合は、GitHub の no-reply メールアドレスを使います。
 
 ## 6. リポジトリに入れてはいけないものを確認する
 
