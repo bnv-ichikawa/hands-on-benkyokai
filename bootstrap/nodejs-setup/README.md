@@ -1,6 +1,6 @@
 # Node.js のセットアップ
 
-Windows PCに Node.js を導入する手順です。**人が読みながら進める手順書です。** [`windows-first-time-setup`](../windows-first-time-setup/README.md) と違い、AIが実行するSkillにはしていません。理由は「Skillにしない理由」を参照してください。
+Windows PCに Node.js を導入する手順です。**人が読みながら進める手順書です。** [`windows-git-setup`](../windows-git-setup/README.md) と違い、AIが実行するSkillにはしていません。理由は「Skillにしない理由」を参照してください。
 
 ## 何に使うのか
 
@@ -15,7 +15,7 @@ Windows PCに Node.js を導入する手順です。**人が読みながら進�
 
 ## Skillにしない理由
 
-Node.js のインストーラーは、環境によって管理者権限(UAC)を求めます。UAC の承認は本人にしかできず、AIが代わりに承認したり、パスワードや PIN を代行入力したりできません。この制約は [`windows-first-time-setup/SKILL.md`](../windows-first-time-setup/SKILL.md) の「管理者権限が必要な場合」と同じです。
+Node.js のインストーラーは、環境によって管理者権限(UAC)を求めます。UAC の承認は本人にしかできず、AIが代わりに承認したり、パスワードや PIN を代行入力したりできません。この制約は [`windows-git-setup/SKILL.md`](../windows-git-setup/SKILL.md) の「管理者権限が必要な場合」と同じです。
 
 そのため、この手順は AI に自動実行させず、**自分の目でダイアログを確認しながら**進めてください。AI に手伝ってもらう場合も、UAC が出た時点で操作を代わってもらわないでください。
 
@@ -38,7 +38,7 @@ npm --version
 winget --version
 ```
 
-`winget` が見つからない場合は、先に [`windows-first-time-setup`](../windows-first-time-setup/README.md) の WinGet 準備手順を行ってください。
+`winget` が見つからない場合は、先に [`windows-git-setup`](../windows-git-setup/README.md) の WinGet 準備手順を行ってください。
 
 ## 3. Node.js をインストールする
 
@@ -84,7 +84,7 @@ npm test
 
 ### `winget install` が失敗する
 
-WinGet 自体が使えない可能性があります。[`windows-first-time-setup`](../windows-first-time-setup/README.md) の WinGet 準備手順を先に行ってください。
+WinGet 自体が使えない可能性があります。[`windows-git-setup`](../windows-git-setup/README.md) の WinGet 準備手順を先に行ってください。
 
 ### `node` / `npm` がコマンドとして見つからない
 
