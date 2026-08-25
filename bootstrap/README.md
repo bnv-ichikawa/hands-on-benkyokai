@@ -8,15 +8,15 @@
 
 ```text
 bootstrap/
-├── windows-first-time-setup/    Windows PC の初期環境をセットアップする
+├── windows-git-setup/    WindowsでGitを導入・設定し、リポジトリをcloneする
 └── nodejs-setup/                Node.js を導入する
 ```
 
-### `windows-first-time-setup/`
+### `windows-git-setup/`
 
-Windows PCで`hands-on-benkyokai`を始めるための初期環境セットアップを担当します。
+Windows PCで`hands-on-benkyokai`を始めるためのGitの導入・初期設定とcloneを担当します。
 
-詳細な使い方は[`README.md`](windows-first-time-setup/README.md)を参照してください。
+詳細な使い方は[`README.md`](windows-git-setup/README.md)を参照してください。
 
 ### `nodejs-setup/`
 
