@@ -9,7 +9,7 @@
 | 項目 | 内容 |
 | --- | --- |
 | 実行環境 | Windows / macOS / Linux |
-| 必要なランタイム | Node.js 18 以上（`node:test` と `node --test` を使うため） |
+| 必要なランタイム | Node.js 18 以上（`node:test` と `node --test` を使うため）。導入方法は[bootstrap/nodejs-setup](../../bootstrap/nodejs-setup/README.md) |
 | 依存パッケージ | **なし。** `npm install` は不要 |
 | 入力 | リポジトリ内の `.md` ファイルと [lib/duplicates.mjs](./lib/duplicates.mjs) の登録一覧 |
 | 出力 | 標準出力の検査結果。**ファイルは書き換えません** |
