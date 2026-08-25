@@ -5,6 +5,19 @@ description: Git がまだ入っていない可能性がある Windows PC を、
 
 # Windows Git セットアップ
 
+## Codexへの実行指示
+
+**これはSkillを作成するための依頼ではない。以下の手順を、現在のWindows PCで実際に実行すること。**
+
+`SKILL.md`や別の手順書を作成・編集するのではなく、この文書に従って次の状態までセットアップを進める。
+
+1. Git for Windowsが使える状態になっている
+2. `hands-on-benkyokai`がWindowsのDesktopへcloneされている
+3. Gitの`user.name`と`user.email`が設定されている
+4. 最終確認がすべて成功している
+
+ユーザー本人の操作が必要な場合だけ停止して依頼し、操作の完了後は結果を確認して手順を再開する。
+
 この手順は **PC ごとに原則1回だけ**使う。
 
 対象 repository は固定する。
