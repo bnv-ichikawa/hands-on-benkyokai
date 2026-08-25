@@ -1,0 +1,3 @@
+interface:
+  display_name: "Windows Git Setup"
+  short_description: "WindowsでWinGet・Gitを準備して初回cloneまで行う"
