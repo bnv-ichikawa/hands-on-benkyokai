@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" width="200" height="220">
+  <!-- オリジナルの「青いロボ猫」マスコット。公式キャラクターの画像は使わず、この資料専用に描き起こしたイラスト -->
+  <ellipse cx="100" cy="205" rx="46" ry="10" fill="#1b3a4b" opacity="0.12"/>
+  <path d="M100 12 C46 12 30 58 30 104 C30 160 46 206 100 206 C154 206 170 160 170 104 C170 58 154 12 100 12 Z" fill="#2f9be0"/>
+  <path d="M100 60 C64 60 52 92 52 122 C52 160 68 184 100 184 C132 184 148 160 148 122 C148 92 136 60 100 60 Z" fill="#ffffff"/>
+  <circle cx="76" cy="96" r="15" fill="#ffffff" stroke="#1b3a4b" stroke-width="4"/>
+  <circle cx="124" cy="96" r="15" fill="#ffffff" stroke="#1b3a4b" stroke-width="4"/>
+  <circle cx="79" cy="97" r="5" fill="#1b3a4b"/>
+  <circle cx="121" cy="97" r="5" fill="#1b3a4b"/>
+  <circle cx="100" cy="112" r="10" fill="#e2231a"/>
+  <path d="M100 118 L100 132" stroke="#1b3a4b" stroke-width="3" stroke-linecap="round"/>
+  <path d="M100 132 C90 142 110 142 100 132" fill="none" stroke="#1b3a4b" stroke-width="3"/>
+  <path d="M20 112 L52 108 M20 124 L52 124 M20 136 L52 132" stroke="#1b3a4b" stroke-width="3" stroke-linecap="round"/>
+  <path d="M180 112 L148 108 M180 124 L148 124 M180 136 L148 132" stroke="#1b3a4b" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="66" cy="118" r="6" fill="#ffb6c1" opacity="0.8"/>
+  <circle cx="134" cy="118" r="6" fill="#ffb6c1" opacity="0.8"/>
+  <rect x="62" y="150" width="76" height="34" rx="17" fill="#ffffff" stroke="#1b3a4b" stroke-width="3"/>
+  <path d="M100 150 L100 184" stroke="#1b3a4b" stroke-width="2"/>
+  <circle cx="100" cy="150" r="10" fill="#ffd400" stroke="#1b3a4b" stroke-width="3"/>
+  <circle cx="100" cy="148" r="2.4" fill="#1b3a4b"/>
+  <path d="M42 40 C58 18 142 18 158 40" fill="none" stroke="#e2231a" stroke-width="10" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 260" width="640" height="260">
+  <!-- オリジナルのbranch/merge概念図。特定サービスのUIやロゴは使わない -->
+  <text x="20" y="200" font-family="sans-serif" font-size="20" fill="#1b3a4b" font-weight="700">main</text>
+  <path d="M70 180 L600 180" stroke="#2f9be0" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+  <text x="230" y="55" font-family="sans-serif" font-size="20" fill="#1b3a4b" font-weight="700">feature ブランチ</text>
+  <path d="M160 180 C 210 180 210 90 260 90 L340 90 C 380 90 380 180 420 180"
+        stroke="#ffd400" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+  <!-- mainのコミット（分岐前） -->
+  <circle cx="90" cy="180" r="10" fill="#2f9be0" stroke="#1b3a4b" stroke-width="3"/>
+  <circle cx="160" cy="180" r="10" fill="#2f9be0" stroke="#1b3a4b" stroke-width="3"/>
+
+  <!-- featureのコミット -->
+  <circle cx="260" cy="90" r="10" fill="#ffd400" stroke="#1b3a4b" stroke-width="3"/>
+  <circle cx="340" cy="90" r="10" fill="#ffd400" stroke="#1b3a4b" stroke-width="3"/>
+
+  <!-- マージコミット -->
+  <circle cx="420" cy="180" r="13" fill="#e2231a" stroke="#1b3a4b" stroke-width="3"/>
+  <text x="405" y="225" font-family="sans-serif" font-size="18" fill="#e2231a" font-weight="700">merge</text>
+
+  <!-- マージ後のmain -->
+  <circle cx="540" cy="180" r="10" fill="#2f9be0" stroke="#1b3a4b" stroke-width="3"/>
+</svg>

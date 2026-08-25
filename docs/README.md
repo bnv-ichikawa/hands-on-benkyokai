@@ -13,6 +13,7 @@ docs/
 ├── readme-authoring-rules.md   README の記述ルール
 ├── github-operations.md        GitHub と PR の運用ルール
 ├── github-account-and-push.md  GitHub アカウント作成と push
+├── lectures/                    講義で見ながら話す Marp 資料
 └── second-brain/               Second Brain の解説・始め方・参考資料
 ```
 
