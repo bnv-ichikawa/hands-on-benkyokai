@@ -15,4 +15,4 @@ windows-git-setup/
 
 ## 🚀 基本的な使い方
 
-Codexが実行する具体的な手順は、[`SKILL.md`](SKILL.md)を参照してください。
+[`SKILL.md`](SKILL.md)の内容を、そのままCodexに渡してください。CodexはSkillを作成するのではなく、書かれている手順に従ってGitの導入からリポジトリのcloneまでを実行します。
