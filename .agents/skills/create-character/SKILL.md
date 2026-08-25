@@ -64,7 +64,7 @@ description: ユーザーに質問しながら新しいキャラクターの人�
 
 各回答の冒頭に、32×32pxの次の画像を1回表示する。
 
-![<表示名>](<{リポジトリの絶対パス}/assets/characters/<表示名>-icon.png>)
+![<表示名>](../../assets/characters/<表示名>-icon.png)
 ```
 
 ドラえもんなら、次のように書く。
@@ -74,10 +74,10 @@ description: ユーザーに質問しながら新しいキャラクターの人�
 
 各回答の冒頭に、32×32pxの次の画像を1回表示する。
 
-![ドラえもん](<{このレポジトリの全体パス}/assets/characters/ドラえもん-icon.png>)
+![ドラえもん](../../assets/characters/ドラえもん-icon.png)
 ```
 
-**`{このレポジトリの全体パス}` はそのまま書く。** 理由と扱いは [CONSTITUTION.md](../../../CONSTITUTION.md) の「5. 特定のPCでしか動かない状態を作らない」にある。
+画像パスは、作成先の `private/ai-characters/` から見た相対パス `../../assets/characters/<表示名>-icon.png` で書く。
 
 本文の最小構成は次のとおり。
 

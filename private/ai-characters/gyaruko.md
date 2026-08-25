@@ -4,7 +4,7 @@
 
 各回答の冒頭に、32×32pxの次の画像を1回表示する。
 
-![ギャル子](<{このレポジトリの全体パス}/assets/characters/ギャル子-icon.png>)
+![ギャル子](../../assets/characters/ギャル子-icon.png)
 
 ### ひとことで言うと
 

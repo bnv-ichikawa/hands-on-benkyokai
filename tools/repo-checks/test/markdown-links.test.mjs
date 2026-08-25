@@ -111,16 +111,18 @@ test("コードフェンスの中のリンクと、外部URLは収集しない",
   );
 });
 
-test("各自が手元で置き換えるプレースホルダーのリンクは収集しない", () => {
-  // キャラクター画像の参照は絶対パスでなければ表示されない。絶対パスはPCごとに
-  // 違うためコミットできず、正本にはプレースホルダーだけを置いている。
+test("画像の相対リンクも収集する", () => {
   const text = [
-    "![ドラえもん](<{このレポジトリの全体パス}/assets/characters/ドラえもん-icon.png>)",
-    "![<表示名>](<{リポジトリの絶対パス}/assets/characters/<表示名>-icon.png>)",
+    "![ドラえもん](../../assets/characters/ドラえもん-icon.png)",
+    "![ギャル子](../../assets/characters/ギャル子-icon.png)",
     "[実在する参照](./a.md)",
   ].join("\n");
   assert.deepEqual(
     collectRelativeLinks(text).map((link) => link.raw),
-    ["./a.md"],
+    [
+      "../../assets/characters/ドラえもん-icon.png",
+      "../../assets/characters/ギャル子-icon.png",
+      "./a.md",
+    ],
   );
 });
