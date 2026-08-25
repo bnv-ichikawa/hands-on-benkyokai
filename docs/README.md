@@ -14,6 +14,7 @@ docs/
 ├── github-account-and-push.md   GitHub アカウント作成と push
 ├── getting-started.md           始めるときに決めること
 ├── second-brain.md              Second Brain とは何か
+├── lectures/                    講義で見ながら話す Marp 資料
 └── references/                  背景知識・用語説明・参考文献
 ```
 

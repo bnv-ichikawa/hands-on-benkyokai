@@ -1,0 +1,297 @@
+/* @theme bnv-lecture */
+/* @size 16:9 1280px 720px */
+
+/*
+ * ひみつ道具テーマ。
+ * 「ロボットみたいな青いキャラクター」の世界観をイメージした、
+ * 社内ハンズオン勉強会向けの Marp テーマ。
+ * 公式キャラクターの画像は使わず、このテーマ専用に描き起こしたオリジナルのイラストのみを使う。
+ */
+
+:root {
+  --bnv-blue: #2f9be0;
+  --bnv-blue-dark: #1c6fa8;
+  --bnv-blue-light: #eaf6ff;
+  --bnv-red: #e2231a;
+  --bnv-yellow: #ffd400;
+  --bnv-ink: #1b3a4b;
+  --bnv-paper: #ffffff;
+  --bnv-sub: #4a6572;
+}
+
+section {
+  width: 1280px;
+  height: 720px;
+  background: var(--bnv-paper);
+  color: var(--bnv-ink);
+  font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", "Noto Sans JP", sans-serif;
+  font-size: 28px;
+  padding: 56px 72px 64px 72px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* 上部の「首輪」ライン。全スライド共通の帯 */
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 14px;
+  background: linear-gradient(90deg, var(--bnv-red) 0 64px, var(--bnv-yellow) 64px 100%);
+}
+
+/* ページ番号を鈴っぽい丸バッジで表示。
+   Marpit標準の `section[data-marpit-pagination]::after` より詳細度を上げて上書きする */
+section[data-marpit-pagination]::after {
+  content: attr(data-marpit-pagination);
+  right: 36px;
+  bottom: 28px;
+  padding: 10px;
+  border-radius: 50%;
+  background: var(--bnv-yellow);
+  border: 2px solid var(--bnv-ink);
+  color: var(--bnv-ink);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+}
+
+h1 {
+  color: var(--bnv-blue-dark);
+  font-size: 46px;
+  margin: 0 0 20px 0;
+  border-bottom: 6px solid var(--bnv-yellow);
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+h2 {
+  color: var(--bnv-blue-dark);
+  font-size: 34px;
+  margin: 0 0 16px 0;
+}
+
+h3 {
+  color: var(--bnv-ink);
+  font-size: 28px;
+}
+
+p, li {
+  line-height: 1.65;
+}
+
+ul, ol {
+  margin-top: 8px;
+}
+
+li::marker {
+  color: var(--bnv-blue);
+}
+
+strong {
+  color: var(--bnv-red);
+}
+
+a {
+  color: var(--bnv-blue-dark);
+}
+
+/* インラインコードのみに適用し、pre内のコードブロックには影響させない */
+p code, li code, td code, th code {
+  background: var(--bnv-blue-light);
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+
+pre {
+  background: var(--bnv-ink);
+  color: #eaf6ff;
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+
+pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 2px solid var(--bnv-blue-light);
+  padding: 10px 14px;
+  text-align: left;
+}
+
+th {
+  background: var(--bnv-blue-light);
+  color: var(--bnv-blue-dark);
+}
+
+/* ===== タイトルスライド ===== */
+section.title {
+  background: radial-gradient(circle at 78% 30%, var(--bnv-blue) 0%, var(--bnv-blue-dark) 70%);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.title::before {
+  background: linear-gradient(90deg, var(--bnv-red) 0 64px, var(--bnv-yellow) 64px 100%);
+}
+
+section.title h1 {
+  color: #ffffff;
+  font-size: 56px;
+  border-bottom: 6px solid var(--bnv-yellow);
+}
+
+section.title .kicker {
+  display: inline-block;
+  background: var(--bnv-yellow);
+  color: var(--bnv-ink);
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 6px 24px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+section.title p.lead {
+  font-size: 26px;
+  color: #eaf6ff;
+  max-width: 760px;
+}
+
+section.title img.mascot {
+  position: absolute;
+  right: 56px;
+  bottom: 90px;
+  width: 220px;
+}
+
+/* ===== セクション区切り（章扉） ===== */
+section.divider {
+  background: var(--bnv-blue-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+section.divider .num {
+  font-size: 120px;
+  font-weight: 800;
+  color: var(--bnv-blue);
+  opacity: 0.35;
+  line-height: 1;
+}
+
+section.divider h1 {
+  font-size: 44px;
+  border-bottom: none;
+}
+
+section.divider img.mascot {
+  position: absolute;
+  right: 64px;
+  bottom: 90px;
+  width: 200px;
+}
+
+/* ===== ひみつ道具メモ（Tip 用の吹き出し） ===== */
+.pocket {
+  background: var(--bnv-blue-light);
+  border: 3px dashed var(--bnv-blue);
+  border-radius: 20px;
+  padding: 18px 24px;
+  margin-top: 18px;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.pocket img.icon {
+  width: 64px;
+  flex: none;
+}
+
+.pocket .label {
+  font-weight: 700;
+  color: var(--bnv-blue-dark);
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* 注意（ガキ大将風の強め注意）。オリジナルのマスコットアイコン付き */
+.caution {
+  background: #fff2ee;
+  border-left: 8px solid var(--bnv-red);
+  border-radius: 8px;
+  padding: 14px 22px;
+  margin-top: 18px;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.caution img.icon {
+  width: 56px;
+  flex: none;
+}
+
+.caution .label {
+  font-weight: 700;
+  color: var(--bnv-red);
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* 2カラムレイアウト */
+.columns {
+  display: flex;
+  gap: 40px;
+  margin-top: 12px;
+}
+
+.columns > div {
+  flex: 1;
+}
+
+/* 締めスライド */
+section.closing {
+  background: var(--bnv-blue-dark);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+section.closing h1 {
+  color: #ffffff;
+  border-bottom: 6px solid var(--bnv-yellow);
+}
+
+section.closing img.mascot {
+  width: 200px;
+  margin-top: 12px;
+}
+
+.small {
+  font-size: 20px;
+  color: var(--bnv-sub);
+}
+
+section.title .small,
+section.closing .small {
+  color: #d7ecfb;
+}
