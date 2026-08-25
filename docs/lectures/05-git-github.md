@@ -134,6 +134,22 @@ paginate: true
 
 ---
 
+## GitHubアカウントを作る
+
+- pushするには、まず**自分のGitHubアカウント**が要る
+- 流れは大きく2ステップ：アカウント作成 → `gh auth login` でログイン
+- 詳しい手順は <code>docs/github-account-and-push.md</code> にまとまっている
+
+<div class="pocket">
+  <img class="icon" src="./assets/characters/pocket.svg" alt="pocket" />
+  <div>
+    <span class="label">ポイント</span>
+    ここでは概念だけ押さえる。実際の作成・ログインは、次回（最終回）の演習でガイドを見ながら進める。
+  </div>
+</div>
+
+---
+
 ## 3つの基本操作
 
 | 操作 | することの一言 |
