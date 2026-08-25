@@ -9,10 +9,11 @@ Second Brain 固有の説明は `second-brain/` にまとめます。業務知�
 ```text
 docs/
 ├── README.md                    このディレクトリの案内
-├── requirements.md              何をするのに何が必要か
-├── readme-authoring-rules.md    README の記述ルール
-├── github-account-and-push.md   GitHub アカウント作成と push
-└── second-brain/                Second Brain の解説・始め方・参考資料
+├── requirements.md             何をするのに何が必要か
+├── readme-authoring-rules.md   README の記述ルール
+├── github-operations.md        GitHub と PR の運用ルール
+├── github-account-and-push.md  GitHub アカウント作成と push
+└── second-brain/               Second Brain の解説・始め方・参考資料
 ```
 
 ### `second-brain/`
@@ -26,6 +27,7 @@ Second Brain の考え方、始め方、整理方法、背景資料を置きま�
 目的に応じて、次の案内から必要な文書を参照します。
 
 - [何をするのに何が必要か](requirements.md)
+- [GitHub と PR の運用ルール](github-operations.md)
 - [GitHub アカウントを作成して自分のリポジトリに push する](github-account-and-push.md)
 - [README の書き方](readme-authoring-rules.md)
 - [Second Brain のドキュメント](second-brain/README.md)
