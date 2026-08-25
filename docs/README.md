@@ -14,7 +14,8 @@ docs/
 ├── github-operations.md        GitHub と PR の運用ルール
 ├── github-account-and-push.md  GitHub アカウント作成と push
 ├── lectures/                    講義で見ながら話す Marp 資料
-└── second-brain/               Second Brain の解説・始め方・参考資料
+├── work-principles/             AI時代の仕事とプロダクトづくりの原則
+└── second-brain/                Second Brain の解説・始め方・参考資料
 ```
 
 ### `second-brain/`
@@ -31,4 +32,5 @@ Second Brain の考え方、始め方、整理方法、背景資料を置きま�
 - [GitHub と PR の運用ルール](github-operations.md)
 - [GitHub アカウントを作成して自分のリポジトリに push する](github-account-and-push.md)
 - [README の書き方](readme-authoring-rules.md)
+- [AI時代の仕事とプロダクトづくりの原則](work-principles/README.md)
 - [Second Brain のドキュメント](second-brain/README.md)
