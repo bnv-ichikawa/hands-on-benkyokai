@@ -9,7 +9,7 @@
 ```text
 bootstrap/
 ├── windows-git-setup/    WindowsでGitを導入・設定し、リポジトリをcloneする
-└── nodejs-setup/                Node.js を導入する
+└── nodejs-setup/         Node.js を導入する
 ```
 
 ### `windows-git-setup/`
