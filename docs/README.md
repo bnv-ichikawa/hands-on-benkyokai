@@ -1,40 +1,31 @@
-# Second Brain の解説
+# docs
 
-`docs/` は、Second Brain の考え方と、このリポジトリの記述ルールを置く場所です。知識庫の本体は、リポジトリのルートにある [`second-brain/`](../second-brain/README.md) です。
+`docs/` は、**このリポジトリとハンズオン勉強会で必要な人間向けドキュメントを置く場所**です。
 
-`README.md` は、この `docs/` 配下の入口です。MOC、つまり関連ノートへの地図としても使います。
+Second Brain 固有の説明は `second-brain/` にまとめます。業務知識そのものは、リポジトリのルートにある [`second-brain/`](../second-brain/README.md) に置きます。
 
 ## 🗂️ ディレクトリ構成
 
 ```text
 docs/
+├── README.md                    このディレクトリの案内
 ├── requirements.md              何をするのに何が必要か
 ├── readme-authoring-rules.md    README の記述ルール
 ├── github-account-and-push.md   GitHub アカウント作成と push
-├── getting-started.md           始めるときに決めること
-├── second-brain.md              Second Brain とは何か
-├── lectures/                    講義で見ながら話す Marp 資料
-└── references/                  背景知識・用語説明・参考文献
+└── second-brain/                Second Brain の解説・始め方・参考資料
 ```
 
-### `references/`
+### `second-brain/`
 
-背景知識、用語説明、参考文献、補足資料を置きます。
+Second Brain の考え方、始め方、整理方法、背景資料を置きます。
 
-- [整理パターン: PARA, Zettelkasten, MOC](references/organization-patterns.md)
-- [Second Brain の時系列と進化](references/second-brain-history.md)
+詳細は [`second-brain/README.md`](second-brain/README.md) を参照してください。
 
-## 🚀 まず読む
+## 🚀 基本的な使い方
+
+目的に応じて、次の案内から必要な文書を参照します。
 
 - [何をするのに何が必要か](requirements.md)
 - [GitHub アカウントを作成して自分のリポジトリに push する](github-account-and-push.md)
-- [Second Brain を始めるときに決めること](getting-started.md)
-- [Second Brain とは何か](second-brain.md)
-
-## 📏 常に従う固定ルール
-
-次の文書は、必要に応じて選ぶ資料ではなく、このリポジトリでの作業に常に適用する固定ルールです。
-
-- [readme-authoring-rules.md](readme-authoring-rules.md) — `README.md` の記述ルール
-- [requirements.md](requirements.md) — 必要なソフトウェア
-- [../CONSTITUTION.md](../CONSTITUTION.md) — リポジトリ全体にかかる決まり
+- [README の書き方](readme-authoring-rules.md)
+- [Second Brain のドキュメント](second-brain/README.md)

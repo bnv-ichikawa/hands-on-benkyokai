@@ -125,7 +125,7 @@ description: ユーザーの業務を質問で聞き出し、再利用できる�
 
 材料に認証情報、個人情報、顧客の機密情報がないか確認する。見つけた場合は内容を引用せず、匿名化または除去を依頼して作業を止める。
 
-判断基準は [getting-started.md](../../../docs/getting-started.md) の「3. 保存しない情報を決める」を使う。
+判断基準は [getting-started.md](../../../docs/second-brain/getting-started.md) の「3. 保存しない情報を決める」を使う。
 
 **聞き取りの途中で出てきた場合も同じ扱いにする。** 会話で聞いたことだから保存してよい、とはしない。
 
@@ -145,11 +145,11 @@ description: ユーザーの業務を質問で聞き出し、再利用できる�
 
 このうち **開始条件、完了条件、標準手順、判断基準、例外** の5つは、「到達基準」を満たすまで掘る。**この5つを用途の都合で省かない。** 掘った結果ユーザーが答えられなかったものだけを、未確認事項として残す。
 
-残り5項目は、業務の成否に効く範囲で聞く。鮮度は frontmatter の `freshness` に反映する（[getting-started.md](../../../docs/getting-started.md) の「古い情報の扱い」）。
+残り5項目は、業務の成否に効く範囲で聞く。鮮度は frontmatter の `freshness` に反映する（[getting-started.md](../../../docs/second-brain/getting-started.md) の「古い情報の扱い」）。
 
 ## 配置
 
-[getting-started.md](../../../docs/getting-started.md) の「4. 情報の置き場所を決める」に従って置き場所を決め、各ディレクトリの `README.md` で判断基準を確認する。
+[getting-started.md](../../../docs/second-brain/getting-started.md) の「4. 情報の置き場所を決める」に従って置き場所を決め、各ディレクトリの `README.md` で判断基準を確認する。
 
 - [`second-brain/projects/`](../../../second-brain/projects/README.md) — 期限、成果物、完了条件がある
 - [`second-brain/areas/`](../../../second-brain/areas/README.md) — 継続的に維持・改善する責任がある
@@ -157,17 +157,17 @@ description: ユーザーの業務を質問で聞き出し、再利用できる�
 - [`second-brain/archives/`](../../../second-brain/archives/README.md) — 完了、停止、または現在は使わない
 - 判断できない場合は `second-brain/inbox/` に残し、何が決まれば動かせるかを書く
 
-PARA の考え方の背景は [second-brain.md](../../../docs/second-brain.md) の「整理の考え方: PARA」にある。同じ内容をノートに書き写さない。
+PARA の考え方の背景は [second-brain.md](../../../docs/second-brain/second-brain.md) の「整理の考え方: PARA」にある。同じ内容をノートに書き写さない。
 
 - 配置理由を一文で示し、ユーザーの合意を取ってからファイルを作る
 - 既存ノートに同じ主題があれば、新規作成せず**そのノートを更新する**
 - 必要以上にファイルを分割しない。ノート1枚で収まる場合はディレクトリを作らず `<業務名>.md` として直接置く。関連ノートが増えてきたら `<業務名>/README.md` を入口にして分ける
 - `README.md` はそのディレクトリの入口・目次であり、ナレッジ本体を書く場所ではない
-- ファイル名は、同じディレクトリの既存ノートと命名方針をそろえる（[getting-started.md](../../../docs/getting-started.md) の「ファイル名」）
+- ファイル名は、同じディレクトリの既存ノートと命名方針をそろえる（[getting-started.md](../../../docs/second-brain/getting-started.md) の「ファイル名」）
 
 ## 書き方
 
-[getting-started.md](../../../docs/getting-started.md) の「事実と自分の考え」に従い、次の4つを混ぜない。
+[getting-started.md](../../../docs/second-brain/getting-started.md) の「事実と自分の考え」に従い、次の4つを混ぜない。
 
 - 確認できた事実
 - ユーザーの判断・経験則（誰の判断か分かるように書く）
@@ -233,8 +233,8 @@ outputs/         引継ぎガイドなどの成果物
 
 参照するファイル。同じ内容をこの SKILL.md や手順書に書き写さない。
 
-- 分類の基準、保存しない情報、メタデータ、運用の決め方: [docs/getting-started.md](../../../docs/getting-started.md)
-- Second Brain と PARA の考え方: [docs/second-brain.md](../../../docs/second-brain.md)
+- 分類の基準、保存しない情報、メタデータ、運用の決め方: [docs/second-brain/getting-started.md](../../../docs/second-brain/getting-started.md)
+- Second Brain と PARA の考え方: [docs/second-brain/second-brain.md](../../../docs/second-brain/second-brain.md)
 - 各置き場所の判断基準: `second-brain/<場所>/README.md`
 - キャラクター定義: `AGENTS.md`（展開済み。追加で読まない）
 

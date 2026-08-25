@@ -2,7 +2,7 @@
 
 `second-brain/` は、**業務知識そのものを置く場所**です。仕事で得た知識、判断、作業記録を、あとから自分と AI が文脈を取り戻して再利用できる形で残します。
 
-**このディレクトリには知識そのものだけを置きます。** 考え方の説明は [`../docs/`](../docs/README.md)、AIへの作業指示は [`../.agents/skills/`](../.agents/skills/) にあります。
+**このディレクトリには知識そのものだけを置きます。** 考え方の説明は [`../docs/second-brain/`](../docs/second-brain/README.md)、AIへの作業指示は [`../.agents/skills/`](../.agents/skills/) にあります。
 
 ## 管理するもの
 
@@ -23,12 +23,12 @@ second-brain/
 └── archives/     完了、停止、または現在は使わない情報を置く
 ```
 
-`projects` / `areas` / `resources` / `archives` は、PARA という整理方法にもとづく区分です。PARA の考え方は [整理パターン: PARA, Zettelkasten, MOC](../docs/references/organization-patterns.md) にあります。
+`projects` / `areas` / `resources` / `archives` は、PARA という整理方法にもとづく区分です。PARA の考え方は [整理パターン: PARA, Zettelkasten, MOC](../docs/second-brain/references/organization-patterns.md) にあります。
 
 ## 📏 共通ルール
 
 - **どこに置くかの判断基準は、各ディレクトリの `README.md` が正本。** 迷ったら `inbox/` に残し、何が決まれば動かせるかを書く
 - `README.md` はそのディレクトリの入口・目次であり、ナレッジ本体を書く場所ではない
-- 分類の決め方は [Second Brain を始めるときに決めること](../docs/getting-started.md) にある
+- 分類の決め方は [Second Brain を始めるときに決めること](../docs/second-brain/getting-started.md) にある
 
 Second Brain は記憶を置き換えるものではありません。未来の自分や AI が過去の文脈を理解し、次の行動や成果物につなげるための外部記憶として育てていきます。
