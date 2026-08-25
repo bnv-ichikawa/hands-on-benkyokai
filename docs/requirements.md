@@ -32,4 +32,5 @@
 | 手順 | 内容 |
 | --- | --- |
 | [github-account-and-push.md](github-account-and-push.md) | GitHub アカウント作成と push |
+| [../bootstrap/nodejs-setup/README.md](../bootstrap/nodejs-setup/README.md) | Node.js の導入方法 |
 | [../tools/repo-checks/README.md](../tools/repo-checks/README.md) | 整合性検査の実行方法 |

@@ -8,7 +8,8 @@
 
 ```text
 bootstrap/
-└── windows-first-time-setup/    Windows PC の初期環境をセットアップする
+├── windows-first-time-setup/    Windows PC の初期環境をセットアップする
+└── nodejs-setup/                Node.js を導入する
 ```
 
 ### `windows-first-time-setup/`
@@ -16,3 +17,9 @@ bootstrap/
 Windows PCで`hands-on-benkyokai`を始めるための初期環境セットアップを担当します。
 
 詳細な使い方は[`README.md`](windows-first-time-setup/README.md)を参照してください。
+
+### `nodejs-setup/`
+
+`tools/repo-checks`や`tools/marp`を使う人向けに、Node.jsの導入手順を担当します。勉強会参加者の多くには不要です。
+
+詳細な使い方は[`README.md`](nodejs-setup/README.md)を参照してください。
