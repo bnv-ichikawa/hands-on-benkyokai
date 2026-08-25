@@ -173,7 +173,7 @@ Second Brainは、生成AIのために生まれた概念ではない。**もと�
   <img class="icon" src="./assets/characters/bell.svg" alt="bell" />
   <div>
     <span class="label">ひみつ道具メモ</span>
-    詳しい時系列と背景は <code>docs/references/second-brain-history.md</code> にまとめてある。
+    詳しい時系列と背景は <code>docs/second-brain/references/second-brain-history.md</code> にまとめてある。
   </div>
 </div>
 

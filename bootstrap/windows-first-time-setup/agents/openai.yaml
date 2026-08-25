@@ -1,3 +1,0 @@
-interface:
-  display_name: "Windows First-Time Setup"
-  short_description: "WindowsでGit導入から初回cloneまで行う"

@@ -1,0 +1,24 @@
+# このワークスペースで Codex に許す権限。参加者全員に同じ条件を配るため Git 管理する。
+# 設定は 7 層（既定値 → MDM → system → 全社管理 → ユーザー ~/.codex/config.toml
+# → プロジェクト = このファイル → 起動時オプション）で解決され、後の層が勝つ。
+#
+# 「フルアクセス」の禁止はこのファイルではできない（起動時オプションに負ける）。
+# それは C:\ProgramData\OpenAI\Codex\requirements.toml の
+# allowed_sandbox_modes で PC 全体に強制している。
+
+# 読み取りは自由。書き込みはこのフォルダ（と一時ディレクトリ）だけに限る。
+sandbox_mode = "workspace-write"
+
+# サンドボックスの外に出る操作は、そのつどユーザーの承認を求める。
+# 承認すればその 1 コマンドだけサンドボックス外で実行される。
+approval_policy = "on-request"
+
+[sandbox_workspace_write]
+# ネットワークは既定で遮断する。必要になったらドメイン単位で承認を求める。
+network_access = false
+
+# git コマンドは push/commit を含めて承認なしで実行する。
+[[rules.prefix_rules]]
+pattern = [{ token = "git" }]
+decision = "allow"
+justification = "git操作は承認不要にする"

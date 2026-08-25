@@ -9,7 +9,7 @@
 | 項目 | 内容 |
 | --- | --- |
 | 実行環境 | Windows / macOS / Linux |
-| 必要なランタイム | Node.js 18 以上（`node:test` と `node --test` を使うため） |
+| 必要なランタイム | Node.js 18 以上（`node:test` と `node --test` を使うため）。導入方法は[bootstrap/nodejs-setup](../../bootstrap/nodejs-setup/README.md) |
 | 依存パッケージ | **なし。** `npm install` は不要 |
 | 入力 | リポジトリ内の `.md` ファイルと [lib/duplicates.mjs](./lib/duplicates.mjs) の登録一覧 |
 | 出力 | 標準出力の検査結果。**ファイルは書き換えません** |
@@ -67,4 +67,4 @@ CIは [.github/workflows/repo-checks.yml](../../.github/workflows/repo-checks.ym
 | `AGENTS.md` が人格の正本である | 3ファイル5箇所 | [CONSTITUTION.md](../../CONSTITUTION.md) |
 | PowerPoint で仕上げたあとは pptx が正本 | 4ファイル4箇所 | [make-my-slides/SKILL.md](../../.agents/skills/make-my-slides/SKILL.md) |
 | `tools/` の役割 | 3ファイル3箇所 | [tools/README.md](../README.md) |
-| PARA の役割の1行説明 | 2ファイル（逐語一致） | [organization-patterns.md](../../docs/references/organization-patterns.md) |
+| PARA の役割の1行説明 | 2ファイル（逐語一致） | [organization-patterns.md](../../docs/second-brain/references/organization-patterns.md) |

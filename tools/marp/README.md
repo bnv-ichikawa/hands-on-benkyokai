@@ -21,7 +21,7 @@ PDF / PPTX 変換では、Marp CLI がブラウザを使ってスライドを描
 
 ## セットアップ
 
-Node.js の入れ方は [docs/requirements.md](../../docs/requirements.md) を読んでください。
+Node.js の入れ方は [bootstrap/nodejs-setup](../../bootstrap/nodejs-setup/README.md) を読んでください。
 
 このツール自体は、リポジトリに依存パッケージを固定インストールしません。Marp CLI 自体のインストールも不要です。実行時に `npx.cmd --yes @marp-team/marp-cli@latest` を呼び出します。
 
