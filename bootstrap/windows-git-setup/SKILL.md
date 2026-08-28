@@ -252,9 +252,9 @@ git --version
 
 既存 PATH の削除、並べ替え、その他の環境変数変更はしない。
 
-## 5. Desktop を取得する
+## 5. Desktop 候補を取得して確認する
 
-Desktop の場所を固定値で推測しない。OneDrive 等のリダイレクトも考慮して Windows API から取得する。
+Desktop の場所を固定値で推測しない。OneDrive 等のリダイレクトも考慮して Windows API から候補を取得する。
 
 ```powershell
 $desktop = [Environment]::GetFolderPath('Desktop')
@@ -262,6 +262,32 @@ if ([string]::IsNullOrWhiteSpace($desktop) -or -not (Test-Path $desktop)) {
     throw 'Windows の Desktop フォルダを取得できませんでした。'
 }
 
+$desktop = (Resolve-Path -LiteralPath $desktop -ErrorAction Stop).Path
+```
+
+clone の前に、取得した候補をユーザーへそのまま表示し、必ず次のように確認する。
+
+```text
+Desktop の候補は「<取得した $desktop>」です。この Desktop の場所で合っていますか？
+```
+
+ユーザーが合っていると答えた場合のみ、そのまま次へ進む。否定された場合にだけ、正しい Desktop の場所を質問する。候補と異なるパスを推測したり、ユーザーが答える前に clone したりしない。
+
+ユーザーから正しい場所を受け取った場合は、パスを展開・正規化して実在するディレクトリか確認する。存在しない場合は clone せず、正しい場所をもう一度確認する。
+
+```powershell
+# ユーザーが示した Desktop パスを $desktop に代入してから実行する
+$desktop = [Environment]::ExpandEnvironmentVariables($desktop)
+if ([string]::IsNullOrWhiteSpace($desktop) -or -not (Test-Path -LiteralPath $desktop -PathType Container)) {
+    throw '指定された Desktop フォルダを確認できませんでした。'
+}
+
+$desktop = (Resolve-Path -LiteralPath $desktop -ErrorAction Stop).Path
+```
+
+Desktop の場所が確定した後に、clone 先を組み立てる。
+
+```powershell
 $repoUrl = 'https://github.com/bnv-ichikawa/hands-on-benkyokai.git'
 $destination = Join-Path $desktop 'hands-on-benkyokai'
 ```
